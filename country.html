@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- google font -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+    <!-- fontawsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- external file css  -->
+    <link href="./src/output.css" rel="stylesheet">
+    <title>Rest Countries API</title>
+</head>
+<body class="font-NunitoSans bg-VeryDarkBlueDM">
+    <!--start header -->
+    <header class="bg-DarkBlueDM">
+        <nav class="container p-3 mx-auto flex items-center justify-between">
+            <p class="text-white text-2xl font-bold">Where in the world?</p>
+            <button class="px-4 py-2 text-white font-medium">
+                <!-- <i class="fa-solid fa-moon"></i> -->
+                <i class="fa-regular fa-sun"></i>
+                Light Mode
+            </button>
+        </nav>
+    </header>
+    <!--end header -->
+    <!-- start btn back  -->
+    <section class="container px-3 mx-auto my-16">
+        <div>
+            <button class="flex items-center justify-between gap-4 w-[20 0px] px-8 py-3 rounded-lg text-VeryLightGrayLM bg-DarkBlueDM drop-shadow-[0px_0px_5px_rgba(0,0,0,0.70)]"> <i class="text-white fa-solid fa-arrow-left-long"></i> back</button>
+        </div>
+    </section>
+    <!-- end btn back  -->
+    <!-- start information  -->
+    <section class="container px-3 mx-auto">
+        <div id="container" class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="">
+                <img src="" alt="flage">
+            </div>
+            <div class="info">
+                <div>
+                    <p class="text-4xl text-white font-bold mb-8">Belgium</p>
+                </div>
+                <div class="flex flex-col md:flex-row">
+                    <div>
+                        <p class="text-white font-medium">Native Name: <span class="text-DarkGrayLM font-medium">Blegie</span></p>
+                        <p class="text-white font-medium">Population: <span class="text-DarkGrayLM font-medium">11.111.111</span></p>
+                        <p class="text-white font-medium">Rigion: <span class="text-DarkGrayLM font-medium">Europe</span></p>
+                        <p class="text-white font-medium">Sub Region: <span class="text-DarkGrayLM font-medium">Western Europe</span></p>
+                        <p class="text-white font-medium">Capital: <span class="text-DarkGrayLM font-medium">Brussles</span></p>
+                    </div>
+                    <div>
+                        <p class="text-white font-medium">Top Level Domain: <span class="text-DarkGrayLM font-medium">be</span></p>
+                        <p class="text-white font-medium">Currencies: <span class="text-DarkGrayLM font-medium">Euro</span></p>
+                        <p class="text-white font-medium">Language: <span class="text-DarkGrayLM font-medium">Dutch, Franch, German</span></p>
+                    </div>
+                </div>
+                <div class="flex  flex-col md:flex-row gap-8 md:gap-4">
+                    <div>
+                        <P class="text-white font-medium">Border Countries:</P>
+                    </div>
+                    <div id="BorderCountries">
+                        <button class="px-4 py-1 drop-shadow-[0px_0px_5px_rgba(0,0,0,0.70)] rounded-md text-DarkGrayLM bg-DarkBlueDM">France</button>
+                        <button class="px-4 py-1 drop-shadow-[0px_0px_5px_rgba(0,0,0,0.70)] rounded-md text-DarkGrayLM bg-DarkBlueDM">Germany</button>
+                        <button class="px-4 py-1 drop-shadow-[0px_0px_5px_rgba(0,0,0,0.70)] rounded-md text-DarkGrayLM bg-DarkBlueDM">Netherlands</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end information  -->
+
+
+
+
+
+    <div class="grid grid-cols-4 gap-4">
+        <p class="w-[200px] h-[100px] bg-VeryDarkBlueDM flex items-center justify-center border">asd</p>
+        <p class="w-[200px] h-[100px] bg-DarkBlueDM flex items-center justify-center border">asd</p>
+        <p class="w-[200px] h-[100px] bg-VeryLightGrayLM flex items-center justify-center border">asd</p>
+        <p class="w-[200px] h-[100px] bg-DarkGrayLM flex items-center justify-center border">asd</p>
+        <p class="w-[200px] h-[100px] bg-white flex items-center justify-center border">asd</p>
+        <p class="w-[200px] h-[100px] bg-VeryDarkBlueLM flex items-center justify-center border">asd</p>
+    </div>
+
+    <!-- header -->
+    <!-- sweet alert cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- axios cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- external file js  -->
+    <script src="country.js"></script>
+</body>
+</html>
