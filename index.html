@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,44 +11,42 @@
     <link href="./src/output.css" rel="stylesheet">
     <title>Rest Countries API</title>
 </head>
-<body class="font-NunitoSans bg-VeryDarkBlueDM">
+<body class="font-NunitoSans bg-VeryLightGrayLM dark:bg-VeryDarkBlueDM transition-colors duration-300 ">
     <!--start header -->
-    <header class="bg-DarkBlueDM">
+    <header class="dark:bg-DarkBlueDM bg-Whitee drop-shadow-[0px_0px_5px_rgba(0,0,0,0.70)]">
         <nav class="container p-3 mx-auto flex items-center justify-between">
-            <p class="text-white text-2xl font-bold">Where in the world?</p>
-            <button class="px-4 py-2 text-white font-medium">
-                <!-- <i class="fa-solid fa-moon"></i> -->
-                <i class="fa-regular fa-sun"></i>
-                Light Mode
+            <p class="dark:text-Whitee text-lg md:text-2xl font-bold">Where in the world?</p>
+            <button id="modeToggle" class="px-4 py-2 dark:text-Whitee font-medium">
+                <i class="fa-solid fa-sun"></i> Light Mode
             </button>
         </nav>
     </header>
     <!--end header -->
     <!--start search bar -->
     <section class="container px-3 mx-auto my-12 relative">
-        <div class=" flex items-center justify-between">
-            <input type="text" id="searchInput" class="w-1/2 pe-4 ps-14 py-3 bg-DarkBlueDM  rounded-lg focus:outline-none focus:border-none text-white text-lg font-medium placeholder:italic placeholder:text-VeryLightGrayLM placeholder:font-medium" placeholder="Search for a country...">
-            <div class="relative inline-block text-left">
+        <div class=" flex flex-col md:flex-row md:items-center items-start justify-between gap-8">
+            <input type="text" id="searchInput" class="w-full md:w-1/2 pe-4 ps-14 py-3 dark:bg-DarkBlueDM  rounded-lg focus:outline-none focus:border-none text-VeryDarkBlueLM dark:text-Whitee text-lg font-medium placeholder:italic dark:placeholder:text-VeryLightGrayLM placeholder:font-medium drop-shadow-[0px_0px_5px_rgba(0,0,0,0.70)]" placeholder="Search for a country...">
+            <div class="relative inline-block text-left ">
                 <div class="group">
-                <button type="button" class="inline-flex w-56 justify-between items-center gap-8 rounded-lg bg-DarkBlueDM px-4 py-3 text-lg font-medium text-white" id="menu-button" aria-expanded="true" aria-haspopup="true">
-                    Filter by Region
-                    <svg class="-mr-1 size-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
-                    <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
-                    </svg>
-                </button>
+                    <button type="button" class="inline-flex  w-56 justify-between items-center gap-8 rounded-lg bg-Whitee dark:bg-DarkBlueDM px-4 py-3 text-lg font-medium text-VeryDarkBlueLM dark:text-Whitee drop-shadow-[0px_0px_5px_rgba(0,0,0,0.70)]" id="menu-button" aria-expanded="true" aria-haspopup="true">
+                        Filter by Region
+                        <svg class="-mr-1 size-5 dark:text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                        <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+                        </svg>
+                    </button>
                 </div>
-                <div id="absolute" class="hidden absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-DarkBlueDM  ring-1 ring-black/5 focus:outline-none " role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
+                <div id="menu" class="hidden absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-Whitee dark:bg-DarkBlueDM  ring-1 dark:ring-black/5 focus:outline-none " role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
                     <div class="py-1 rounded-lg region" role="none">
                         <!-- Active: "bg-gray-100 text-gray-900 outline-none", Not Active: "text-gray-700" -->
-                        <p class="block px-4 py-2 text-sm text-white cursor-pointer" >Africa</p>
-                        <p class="block px-4 py-2 text-sm text-white cursor-pointer" >America</p>
-                        <p class="block px-4 py-2 text-sm text-white cursor-pointer" >Asia</p>
-                        <p class="block px-4 py-2 text-sm text-white cursor-pointer" >Europe</p>
-                        <p class="block px-4 py-2 text-sm text-white cursor-pointer" >Oceania</p>
+                        <p class="block px-4 py-2 text-sm text-VeryDarkBlueLM dark:text-Whitee cursor-pointer" >Africa</p>
+                        <p class="block px-4 py-2 text-sm text-VeryDarkBlueLM dark:text-Whitee cursor-pointer" >America</p>
+                        <p class="block px-4 py-2 text-sm text-VeryDarkBlueLM dark:text-Whitee cursor-pointer" >Asia</p>
+                        <p class="block px-4 py-2 text-sm text-VeryDarkBlueLM dark:text-Whitee cursor-pointer" >Europe</p>
+                        <p class="block px-4 py-2 text-sm text-VeryDarkBlueLM dark:text-Whitee cursor-pointer" >Oceania</p>
                     </div>
                 </div>
             </div>
-            <i id="icon" class="cursor-pointer fa-solid fa-magnifying-glass absolute top-1/2 left-0 transform translate-x-[20px] translate-y-[-50%] p-3 text-white"></i>
+            <i id="icon" class="cursor-pointer fa-solid fa-magnifying-glass absolute top-1/2 left-0 transform translate-x-[20px] translate-y-[-60px] md:translate-y-[-50%] p-3 text-DarkBlueDM dark:text-Whitee"></i>
         </div>
     </section>
     <!--end search bar -->
@@ -58,25 +56,12 @@
         </div>
     </section>
     <!--end countries grid -->
-
-
-
-
-    <div class="grid grid-cols-4 gap-4">
-        <p class="w-[200px] h-[100px] bg-VeryDarkBlueDM flex items-center justify-center border">asd</p>
-        <p class="w-[200px] h-[100px] bg-DarkBlueDM flex items-center justify-center border">asd</p>
-        <p class="w-[200px] h-[100px] bg-VeryLightGrayLM flex items-center justify-center border">asd</p>
-        <p class="w-[200px] h-[100px] bg-DarkGrayLM flex items-center justify-center border">asd</p>
-        <p class="w-[200px] h-[100px] bg-white flex items-center justify-center border">asd</p>
-        <p class="w-[200px] h-[100px] bg-VeryDarkBlueLM flex items-center justify-center border">asd</p>
-    </div>
-
-    <!-- header -->
     <!-- sweet alert cdn -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- axios cdn -->
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <!-- external file js  -->
     <script src="main.js"></script>
+    <!-- <script src="country.js"></script> -->
 </body>
 </html>

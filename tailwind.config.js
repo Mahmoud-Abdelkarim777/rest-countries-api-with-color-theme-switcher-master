@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./index.html", "./country.html", "./main.js","./src/**/*.{html,js}"],
+  content: ["./index.html", "./country.html", "./country.js", "./main.js","./src/**/*.{html,js}"],
+  darkMode: 'class', // تمكين الوضع الليلي باستخدام الكلاسات
   theme: {
     extend: {
       visibility: ['group-hover'],
@@ -13,7 +14,7 @@ module.exports = {
         VeryDarkBlueLM: 'hsl(200, 15%, 8%)',
         DarkGrayLM: 'hsl(0, 0%, 52%)',
         VeryLightGrayLM: 'hsl(0, 0%, 98%)',
-        White: 'hsl(0, 0%, 100%)',
+        Whitee: 'hsl(0, 0%, 100%)',
       },
     },
   },
